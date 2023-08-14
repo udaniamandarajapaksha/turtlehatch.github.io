@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/kochop-7659491_1920.jpg);
+     background-position-x: center;
+     background-size: cover;
+     position: relative;
+}
+
+
+.topnav {
+    background-color: #161313;
+    overflow: hidden;
+  }
+
+
+  topnav.fa{
+    display: none;
+}
+
+
+  
+@media(max-width:700px){
+   .text-box h1{
+      font-size: 20px;
+   }
+   .topnav ul li{
+      display: block;
+
+   }
+   .topnav{
+      position: absolute;
+      background: #c1817c;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right:-200px;
+      text-align: left;
+      z-index: 2;
+      transition: is;
+   }
+   topnav.fa{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+
+
+   }
+   .topnav ul{
+      padding: 30px;
+
+   }
+
+
+}
+
+
+
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #66c749;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #14a89c;
+    color: rgb(140, 210, 228);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #c0217e;
+    color: rgb(23, 155, 104);
+  }
+
+.kosgodah1{
+    font-size: 40px;
+}
+
+
+
+
+/*---------footer----------*/
+
+.border {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    border-spacing: 100px;
+  }
+  
+  .border-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .border-links li {
+    margin: 0 10px;
+  }
+  
+  .border-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+  
+  .border-links a:hover {
+    color: #000;
+  }
+  
+  .border-links a:active {
+    color: #999;
+  }
+.copyright{
+
+      text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .border {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .border-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .border-links li {
+    margin: 5px;
+  }
+}
+
+
+.topnav {
+    background-color: #7a7777;
+    overflow: hidden;
+  }
+
+/*------------benthota----------------*/
+
+
+.benthota h1{ 
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgba(3, 43, 43, 0.596);
+    text-align: center;
+}
+.benthota h2{
+    font-size: 30;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.benthota p{ 
+    font-size: 25;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(0, 0, 0);
+}
+
+
+
+/*------------images-------------*/
+
+
+.benthotaimg {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .benthotaimg img {
+    width: 400px; 
+    margin: 0 10px; 
+    height: 200px;
+  }
+
+
+
+  /*----------------gtnbenthota-----------*/
+
+  .gtnbenthota h2{
+font-size: 25px;
+color: aliceblue;
+
+
+  }
+  .gtnbenthota p{
+font-size: 20px;
+
+  }
+
+
+
+  /*-------------location-------------*/
+
+
+  .map-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* Adjust this value to set the aspect ratio of the map */
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .location1{
+font-size: 30px;
+text-align: center;
+color:rgb(27, 13, 226);
+
+  }

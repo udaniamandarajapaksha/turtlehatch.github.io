@@ -1,0 +1,629 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*{
+    margin : 0;
+    padding :0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+min-height: 100vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+background-size:cover;
+background-position: center;
+position:relative;
+}
+@media(min-aspect-ratio:16/9){
+    .backgroundvideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .backgroundvideo{
+        width: auto;
+        height: 100%;
+    }
+}
+nav{
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+nav img{
+    width: 100px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.nav-links ul li::after{
+content: "";
+width: 0%;
+height: 2px;
+background: #f44336;
+display: block;
+margin: auto;
+transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+.text-box{
+width: 90%;
+color:#fff;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin:10px 0 40px;
+    font-size: 14px;
+    color:#fff
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding:12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+border: 1px solid #f44336;
+background-color: #f44336;
+transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+.sub-menu{
+    display: none;
+}
+.nav-links ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+   
+}
+.nav-links ul li:hover .sub-menu ul{
+display: block;
+margin: 5px;
+}
+.nav-links ul li:hover .sub-menu ul li{
+    width: 80px;
+    padding: 5px;
+    background: transparent;
+    border-radius: 0;
+    text-align: center;
+}
+.logo-container img {
+    width: 200px; 
+    height: auto; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    /* Styles for screens up to 768px width */
+    .logo-container img {
+      width: 150px;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .nav-links ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .nav-links ul li {
+      padding: 8px 12px;
+      white-space: nowrap;
+    }
+  
+    .nav-links ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  
+    .nav-links ul li::after {
+      content: "";
+      width: 0%;
+      height: 2px;
+      background: #f44336;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+  
+    .nav-links ul li:hover::after {
+      width: 100%;
+    }
+  
+    nav .fa {
+      display: block;
+      color: white;
+      font-size: 20px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  
+    .sub-menu {
+      display: none;
+    }
+  }
+
+/*------------Ticket-----------------------*/
+.sub-header-ticket{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(12, 216, 15, 0.7),rgba(4,9,30,0.7));
+    background-position: center;
+    background-image: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header-ticket h1{
+    margin-top: 100px;
+}
+.sub-header-ticket p{
+    font-size: 15px;
+    font-style:inherit;
+}
+@media(max-width:768px){
+    .text-box h1{
+        font-size: 20px;
+    }
+        .sub-header-ticket h1{ 
+        padding: 35px;
+    }
+       .sub-header-ticket p{ 
+        padding-bottom: 30px;
+    }
+     
+}
+
+/*--------Calendar--------------*/
+:root {
+  --primary-color: #0a75f9;
+  --text-color: #1d1d1d;
+  --bg-color: #f1f1fb;
+}
+body {
+  background: #ffffff;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#calendar {
+  width: 100%;
+  max-width: 600px;
+  background: var(--bg-color);
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+#calendar .headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+#calendar .headers .month {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+#calendar .headers .btns {
+  display: flex;
+  gap: 10px;
+}
+#calendar .headers .btns .btn {
+  width: 50px;
+  height: 40px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#calendar .headers .btns .btn:hover {
+  background: #0a75f9;
+  transform: scale(1.05);
+}
+#calendar .weekdays {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+#calendar .weekdays .day {
+  width: calc(100% / 7 - 10px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+#calendar .days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#calendar .days .day {
+  width: calc(100% / 7 - 10px);
+  height: 50px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  transition: all 0.3s;
+  user-select: none;
+}
+#calendar .days .day:not(.next):not(.prev):hover {
+  color: #fff;
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+#calendar .days .day.next,
+#calendar .days .day.prev {
+  color: #ccc;
+}
+#calendar .days .day.today {
+  color: #fff;
+  background: var(--primary-color);
+}
+
+/* Add the following CSS to style the disabled days */
+#calendar .day.disabled {
+  pointer-events: none;
+  color: #ccc;
+  opacity: 0.5;
+}
+/* Add the following CSS to style the selected day */
+#calendar .day.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+
+
+
+/* Ticket Count*/
+
+
+
+.ticket-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f1f1fb;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-category {
+  margin-bottom: 10px;
+}
+h2{
+  text-align: center;
+}
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #0a75f9;
+}
+
+em {
+  color: grey; /* Change the color here to your desired color */
+}
+button {
+  padding: 5px 10px;
+  background-color: #0a75f9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0a75f9;
+}
+
+
+/*time slot*/
+
+#timeslot {
+  text-align: center;
+  padding: 10px;
+  color: #090909;
+  
+}
+em b {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.timehour,
+.pricelist {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+#table1,
+#table2 {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#table1 th,
+#table1 td,
+#table2 th,
+#table2 td {
+  padding: 10px;
+  text-align: center;
+  background-color: #f1f1fb;
+
+}
+
+#table1 th,
+#table2 th {
+  background-color: #f1f1fb;
+}
+
+#table1 th[colspan="2"],
+#table2 th[colspan="4"] {
+  background-color: #0a75f9;
+  color: #fff;
+}
+
+
+
+
+
+/*Time slot calculation*/
+
+
+.timecontainer {
+  text-align: center;
+  align-items: center;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f1f1fb;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 40%;
+}
+
+#timecheckbox {
+  margin-top: 20px;
+  align-items: center;
+ 
+}
+
+h5 {
+  margin: 10px 0;
+ 
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label {
+  display: block;
+  color: #090909;
+}
+
+button {
+  margin-top: 10px;
+}
+
+/* Add your existing CSS stylesheets here */
+/* ... */
+
+.summary-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f1f1fb;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#summary-table {
+  width: 100%;
+}
+
+#summary-table th,
+#summary-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#summary-table th {
+  background-color: #0a75f9;
+  color: #fff;
+}
+
+#summary-table tr:nth-child(even) {
+  background-color: #f1f1fb;
+}
+
+
+/* Add this CSS to style the "Continue with purchase" button */
+.continue-purchase-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#continuePurchaseBtn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#continuePurchaseBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/*---------footer----------*/
+
+.border {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-spacing: 100px;
+}
+
+.border-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.border-links li {
+  margin: 0 10px;
+}
+
+.border-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.border-links a:hover {
+  color: #000;
+}
+
+.border-links a:active {
+  color: #999;
+}
+.copyright{
+
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+.border {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.border-links {
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.border-links li {
+  margin: 5px;
+}
+}
+
+
+.topnav {
+  background-color: #7a7777;
+  overflow: hidden;
+}

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="with=device-width,initial-scale=1.0">
+        <title>Turtle Hatchery in Sri Lanka</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+    
+    <link rel="stylesheet" href="ticket.css">
+    </head>
+<body>
+<section class="sub-header-ticket">
+<nav>
+    <div class="logo-container">
+       
+         </div>   
+          <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="ticket.html">BOOK TICKETS</a></li>
+            <li><a href="details.html">DETAILS</a></li>
+            <li><a href="purchase_card_details.html">PAYMENT</a></li>
+            <li><a href="confirmation.html">CONFIRMATION</a>
+        </ul>
+    </div> 
+</nav>
+<h1>BOOK TICKETS</h1>
+</section>
+
+<div class="container">
+    <div id="calendar" >
+      <h1>WHEN ARE YOU COMING?</h1>
+
+      <div class="headers">
+        <div class="month"></div>
+        <div class="btns">
+          <div class="btn today-btn">
+            <i class="fas fa-calendar-day"></i>
+          </div>
+          <div class="btn prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="btn next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="weekdays">
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+      </div>
+      <div class="days">
+        <!-- lets add days using js -->
+      </div>
+      <!-- Add the element to display selected date -->
+      <div class="selected-date-display">
+        <!--<p id="selectedDateDisplay">Happy to see you on: </p>--->
+      </div>
+     <button class="btn confirm-btn">  Confirm Date </button>
+    </div>
+  </div>
+<!-- Add these elements where appropriate in your HTML -->
+
+
+
+
+
+
+<!--Ticket Count-->
+
+  <div class="ticket-container">
+    <h2>GUEST COUNT</h2>
+    <div class="ticket-category">
+      <label for="sl-adult"><b>SL Adult:</b> <br><em>Above 15 years</em></label>
+      <input type="number" id="sl-adult" min="0">
+    </div>
+    <div class="ticket-category">
+      <label for="sl-child"><b>SL Child:</b> <br><em>Above 15 years</em></label>
+      <input type="number" id="sl-child" min="0">
+    </div>
+    <div class="ticket-category">
+      <label for="foreigner-adult"><b>Foreigner Adult:</b> <br><em>Above 15 years</em></label>
+      <input type="number" id="foreigner-adult" min="0">
+    </div>
+    <div class="ticket-category">
+      <label for="foreigner-child"><b>Foreigner Child:</b> <br><em>Above 15 years</em></label>
+      <input type="number" id="foreigner-child" min="0">
+    </div>
+    <div class="ticket-category">
+      <label for="infant"><b>Infant:</b> <br><em>Above 15 years</em></label>
+      <input type="number" id="infant" min="0">
+    </div>
+    <button id="book-tickets">Confirm the Counts</button>
+    <button id="reset-tickets">Reset Counts</button>
+
+     <!-- Total Ticket Count Display -->
+     <div class="total-count">
+      <p>Total Tickets: <span id="total-tickets"></span></p>
+    </div>
+  </div>
+
+
+
+<!--Time slot Table-->
+
+<br>
+<br>
+
+<div id="timeslot">
+  <h2><b><u>DURATION</u></b></h2>
+</div><br>
+<p><em><b>The Table below shows the details of time slots and prices.</b></em></p><br>
+
+<div class="timehour">
+      <table id="table1" border="1">
+  <tr>
+      <th colspan="2">HIKKADUWA TURTLE HATCHERY</th>
+  </tr>
+  <tr>
+      <th>TIME SLOTS</th>
+      <th>NORMAL/PEAK</th>
+  </tr>
+  <tr>
+      <td>07.00 am - 08.00 am</td>
+      <td>Normal hour</td>
+  </tr>
+  <tr>
+      <td>08.00 am - 9.00 am</td>
+      <td>Normal hour</td>
+  </tr>
+  <tr>
+      <td>9.00 am - 10.00 am</td>
+      <td>Normal hour</td>
+  </tr>
+  <tr>
+      <td>10.00 am - 11.00 am</td>
+      <td>Peak hour</td>
+  </tr>
+  <tr>
+      <td>11.00 am - 12.00 pm</td>
+      <td>Peak hour</td>
+  </tr>
+  <tr>
+      <td>12.00 pm - 1.00 pm</td>
+      <td>Peak hour</td>
+  </tr>
+  <tr>
+      <td>1.00 pm - 2.00 pm</td>
+      <td>Normal hour</td>
+  </tr>
+  <tr>
+      <td>2.00 pm - 3.00 pm</td>
+      <td>Normal hour</td>
+  </tr>
+  <tr>
+      <td>3.00 pm - 4.00 pm</td>
+      <td>Peak hour</td>
+  </tr>
+  <tr>
+      <td>4.00 pm - 5.00pm</td>
+      <td>Peak hour</td>
+  </tr>
+  <tr>
+      <td>5.00 pm - 6.00 pm</td>
+      <td>Peak hour</td>
+  </tr>
+</table>
+</div><br><br><br>
+<div class="pricelist">
+<table id="table2" border="1">
+  <tr>
+      <th colspan="4">Prices for Normal and Peak Hours</th>
+  </tr>
+  <tr>
+      <th>NORMAL HOUR</th>
+      <th>PRICE</th>
+      <th>PEAK HOUR</th>
+      <th>PRICE</th>
+  </tr>
+  <tr>
+      <td>Foreigner Adult</td>
+      <td>10 USD</td>
+      <td>Foreigner Adult</td>
+      <td>13 USD</td>
+  </tr>
+  <tr>
+      <td>Foreigner Child</td>
+      <td>13 USD</td>
+      <td>Foreigner Child</td>
+      <td>8 USD</td>
+  </tr>
+  <tr>
+      <td>Sri Lankan Child</td>
+      <td>2 USD</td>
+      <td>Sri Lankan Child</td>
+      <td>3 USD</td>
+  </tr>
+  <tr>
+     <td>Sri Lankan Adult</td>
+     <td>4 USD</td>
+     <td>Sri Lankan Adult</td>
+     <td>6 USD</td>
+  </tr>
+  <tr>
+      <td>Infant</td>
+      <td>Free</td>
+      <td>Infant</td>
+      <td>Free</td>
+  </tr>
+</table>
+</div>
+
+
+
+
+
+<!--time slot check box-->
+<div class="timecontainer">
+<div id="timecheck">
+  <h2><b><u>SELECT YOUR VISITING TIME HOUR</u></b></h2>
+</div>
+
+<div id="timecheckbox">
+  <h5><b><u>Select a duration:</u></b></h5>
+  <input type="checkbox" id="duration1" name="duration"><label for="duration1">7.00 am - 8.00 am (Normal)</label><br>
+  <input type="checkbox" id="duration1" name="duration"><label for="duration2">8.00 am - 9.00 am (Normal)</label><br>
+  <input type="checkbox" id="duration2" name="duration"><label for="duration3">9.00 am - 10.00 am (Normal)</label><br>
+  <input type="checkbox" id="duration3" name="duration"><label for="duration4">10.00 am - 11.00 am (Peak)</label><br>
+  <input type="checkbox" id="duration4" name="duration"><label for="duration5">11.00 am - 12.00 pm (Peak)</label><br>
+  <input type="checkbox" id="duration5" name="duration"><label for="duration6">12.00 pm - 1.00 pm (Peak)</label><br>
+  <input type="checkbox" id="duration6" name="duration"><label for="duration7">1.00 pm - 2.00 pm (Normal)</label><br>
+  <input type="checkbox" id="duration7" name="duration"><label for="duration8">2.00 pm - 3.00 pm (Normal)</label><br>
+  <input type="checkbox" id="duration8" name="duration"><label for="duration9">3.00 pm - 4.00 pm (Peak)</label><br>
+  <input type="checkbox" id="duration9" name="duration"><label for="duration10">4.00 pm - 5.00 pm (Peak)</label><br>
+  <input type="checkbox" id="duration10" name="duration"><label for="duration11">5.00 pm - 6.00 pm (Peak)</label><br>
+  <button id="calculateBtn" onclick="calculateTotal()">Calculate Total</button>
+  <button id="resetBtn" onclick="resetForm()">Reset</button>
+  <div id="resultContainer">
+    <h3>Results:</h3>
+    <p>Total Hours: <span id="totalHours">0</span></p>
+    <p>Peak Hours: <span id="peakHours">0</span></p>
+    <p>Normal Hours: <span id="normalHours">0</span></p>
+    <button id="confirmBtn">Confirm Selection</button>
+  </div>
+</div>
+</div>
+
+
+
+
+<!--
+<section id="summary">
+  <h2>Summary</h2>
+  <table>
+    <tr>
+      <td>Date</td>
+      <td id="summaryDate"></td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td id="summaryTime"></td>
+    </tr>
+    <tr> 
+      <td>Duration</td>
+      <td id="summaryDuration"></td>
+    </tr>
+    <tr>
+      <td>Tickets</td>
+      <td id="summaryTickets"></td>
+    </tr>
+    <tr>
+      <td>Total Payable</td>
+      <td id="summaryTotal"></td>
+    </tr>
+  </table> 
+
+</section> -->
+
+
+<div class="sum-tab">
+
+  <table>
+      <thead>
+        
+      </thead>
+      <tbody id="tbody1">
+
+      </tbody>
+      <tbody>
+
+      </tbody>
+
+  </table>
+</div>
+
+
+<div class="continue-purchase-container">
+  <a href="details.html">
+  <button id="continuePurchaseBtn" enabled>Continue with purchase</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+
+<section class="border">
+  <ul class="border-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Turtle categories.html">Turtle Categories</a></li>
+      <li><a href="kosgoda.html">Kosgoda</a></li>
+      <li><a href="hikkaduwa.html">Hikkaduwa</a></li>
+      <li><a href="benthota.html">Benthota</a></li>
+      <li><a href="Threats to turtles.html">Threats To Turtles</a></li>
+      <li>  <a href="Purchase and Donate page.html">Purchase </a></li>
+        <li><a href="donate page.html">Donation Form</a></li>
+</ul>
+  <p class="copyright">
+    &copy; 2023 Turtle Paradise. All Rights Reserved.
+  </p>
+
+</section>
+<script src="calendar.js"></script>
+<script src="timeslot.js"></script>
+<script src="peakcalculation.js"></script>
+<script src="button.js"></script>
+<script src="ticketcount.js"></script>
+
+
+</body>
+</html>
